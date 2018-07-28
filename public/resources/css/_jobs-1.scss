@@ -1,0 +1,200 @@
+.job{
+    &-wrapper{
+        margin-top: 10px;
+    }
+    &-item{
+        width: 100%;
+        background: #fff;
+        display: flex;
+     
+        &:nth-child( n + 2 ){
+            border-top: 1px solid rgba(0,0,0,.16);
+        }
+        .job{
+            &-thumbnail{
+                padding: 4px;
+                width: 120px;
+               display: flex;
+                float: left;
+                overflow: hidden;
+                cursor: pointer;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+            
+                -webkit-box-orient: horizontal; 
+                -moz-box-orient: horizontal;
+                box-orient: horizontal;
+                flex-direction: row;
+            
+                -webkit-box-pack: center;
+                -moz-box-pack: center;
+                box-pack: center;
+                justify-content: center;
+            
+                -webkit-box-align: center;
+                -moz-box-align: center;
+                box-align: center;  
+                align-items: center;
+        
+                .image-box{
+                     -webkit-box-flex: 1;
+                    -moz-box-flex: 1;
+                    box-flex: 1;
+                    -webkit-flex: 1 1 auto;
+                    flex: 1 1 auto; 
+                    text-align: center;
+                    img{
+                        max-width: 100%;
+                        transition: all .4s ease-out;
+                    }
+                }
+                
+               
+            }
+            &-content{
+                width: calc( 100% - 120px );
+                padding: 10px 20px;
+                position: relative;
+                float: left;
+            }
+            &-title{
+               &>a{
+                font-size: 20px;
+                text-decoration: none;
+                color: $primary_color;
+                font-weight: 500;
+               }
+    
+            }
+            &-type{
+                font-weight: 500;
+                color: #fff;
+                line-height: 12px;
+                font-weight: 500;
+                font-size: 12px;
+                padding: 8px 20px;
+                text-decoration: none;
+                float: left;
+                display: inline-block;
+                &.freelancer{
+                    background: $_3_color;
+                   
+                }
+                &.fulltime{
+                    background: #186fc9;
+                }
+                &.partime{
+                    background: #f1630d;
+                }
+            }
+            &-btn-save{
+
+                float: right;
+                width: 30px;
+                height: 30px;
+                overflow: hidden;
+                border-radius: 100%;
+                border: 1px solid #ededed;
+                text-align: center;
+                color: $_3_color;
+                font-size: 14px;
+                line-height: 18px;
+                padding-top: 6px;
+                -webkit-transition: all 0.4s ease-in-out;
+                -moz-transition: all 0.4s ease-in-out;
+                -ms-transition: all 0.4s ease-in-out;
+                -o-transition: all 0.4s ease-in-out;
+                transition: all 0.4s ease-in-out;
+                &:hover{
+                    background: $second-color;
+                    color: #fff;
+                }
+            }
+            &-group{
+                float: left;
+                a{
+                    float: left;
+                    margin-right: 15px;
+                    color: $primary_color;
+                    text-decoration: none;
+                    &:hover{
+                        color: $primary_color;
+                    }
+                }
+            }
+            &-salary{
+               
+               color: $second-color;
+
+            }
+        }
+        &:hover{
+            .job{
+                &-thumbnail{
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    
+    }
+    &-filter{
+
+        width: 100%;
+        float: left;
+        overflow: hidden;
+        .list-group{
+            margin-bottom: 8px;
+        }
+    }
+    &-detail{
+        .company{
+            &-cover{
+                position: absolute;
+                top: 0px;
+                left: 0;
+                width: 100%;
+                overflow: hidden;
+                height: auto;
+                max-height: 250px;
+            }
+           
+        }
+        &-content{
+            margin-top: 120px;
+            position: relative;
+            padding: 10px 300px;
+        }
+        &-header{
+        
+            overflow: hidden;
+            .thumbnail{
+                width: 120px;
+                height: 120px;
+                float: left;
+            }
+            .content{
+                width: calc( 100% - 120px );
+                float: left;
+                position: relative;
+                padding: 10px 20px;
+             
+                
+            }
+            .title{
+                margin-bottom: 13px;
+                font-size: 25px;
+                line-height: 35px;
+                font-weight: 500;
+            }
+        }
+        &-content{
+            line-height: 25px;
+        }
+    }
+    
+}

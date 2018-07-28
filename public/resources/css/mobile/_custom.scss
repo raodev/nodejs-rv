@@ -1,0 +1,33 @@
+#mobile-fiter-footer{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+    line-height: 40px;
+    z-index: 1000;
+    box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.4);
+    .tab{
+        border-right: 1px solid rgba(0,0,0,0.07);
+        a{
+            text-transform: none;
+            color : $primary_color;
+            font-size: 10px;
+            font-weight: 600;
+            i{
+                font-weight: 600;
+            }
+            &.active{
+               background: rgba(30, 51, 104, 0.18);
+            }
+    
+        }
+        
+    }
+    .indicator{
+        top: 0px;
+        bottom: '';
+        background : $primary_color;
+    }
+}
