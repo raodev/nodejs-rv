@@ -428,6 +428,16 @@
   float: none;
   min-height: 1px;
   padding: 10px;
+  width: 18.5%;
+  float: left;
+  margin-right: 13px;
+  margin-bottom: 13px;
+  min-height: 255px;
+  padding: 10px 10px 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  background: #FFF;
+  border-radius: 4px;
 }
 
 .job-item .media-left img {
@@ -439,76 +449,24 @@
   border-radius: 4px;
 }
 
-.media {
-  margin-top: 15px;
-}
-
-.media-body {
+.category-item {
+  border: 1px solid rgba(0, 0, 0, 0.16);
   overflow: hidden;
-  zoom: 1;
-  display: table-cell;
-  vertical-align: top;
+  margin-top: 10px;
+  height: 60px;
+  border-radius: 4px;
 }
 
-.media-left {
-  display: table-cell;
-  vertical-align: top;
+.category-icon {
+  width: 100%;
+  text-align: center;
 }
 
-.media-right {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.short-text {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-}
-
-.nom {
-  margin: 0 !important;
-}
-
-.ts18 {
-  font-size: 18px;
-}
-
-.lh1-4 {
-  line-height: 1.4;
-}
-
-.tb {
-  font-weight: 600;
-}
-
-.tc1 {
-  color: #193661 !important;
-}
-
-p {
-  margin: 0 0 10px;
-}
-
-.ts12 {
+.category-name {
   font-size: 12px;
-}
-
-.lh1-4 {
-  line-height: 1.4;
-}
-
-.tb {
-  font-weight: 600;
-}
-
-.tc3 {
-  color: #E6053C !important;
-}
-
-figure {
-  margin: 0;
+  text-align: center;
+  margin: 0px;
+  line-height: 14px;
 }
 
 #mobile-fiter-footer {

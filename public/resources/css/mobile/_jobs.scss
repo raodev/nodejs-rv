@@ -1,8 +1,8 @@
 .job{
    &-list{
-    position: relative;
-    padding: 0;
-    margin: 0;
+        position: relative;
+        padding: 0;
+        margin: 0;
    }
    &-item{
     overflow: hidden;
@@ -34,61 +34,4 @@
         }
    }
 }
-.media{
-    margin-top: 15px;
-    &-body{
-        overflow: hidden;
-        zoom: 1;
-        display: table-cell;
-        vertical-align: top;
-    }
-    &-left{
-        display: table-cell;
-        vertical-align: top;
-    }
-    &-right{
-        display: table-cell;
-        vertical-align: top;
-    }
-}
-.short-text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-}
-
-.nom {
-    margin: 0!important;
-}
-
-.ts18 {
-    font-size: 18px;
-}
-.lh1-4 {
-    line-height: 1.4;
-}
-.tb {
-    font-weight: 600;
-}
-.tc1 {
-    color: #193661!important;
-}
-p {
-    margin: 0 0 10px;
-}
-.ts12 {
-    font-size: 12px;
-}
-.lh1-4 {
-    line-height: 1.4;
-}
-.tb {
-    font-weight: 600;
-}
-.tc3 {
-    color: #E6053C!important;
-}
-figure {
-    margin: 0;
 }

@@ -1,0 +1,19 @@
+.category{
+    &-item{
+        border: 1px solid rgba(0,0,0,0.16);
+        overflow: hidden;
+        margin-top: 10px;
+        height: 60px;
+        border-radius: 4px;
+    }
+    &-icon{
+        width: 100%;
+        text-align: center;
+    }
+    &-name{
+        font-size: 12px;
+        text-align: center;
+        margin: 0px;
+        line-height: 14px;
+    }
+}

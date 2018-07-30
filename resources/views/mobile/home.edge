@@ -1,56 +1,36 @@
 @layout('mobile.layouts.master')
 @section('content')
-    <div class="row">
-        <div class="jobs-list">
-            <div itemscope="" itemtype="http://schema.org/JobPosting" class="job-item ">
-                <div class="media">
-                    <div class="media-left media-top">
-                        <figure>
-                            <a itemprop="url" href="https://thue.today/tuyen-dung/nhan-vien-phuc-vu.151" data-job-id="151" title="Nhân viên phục vụ">
-                                <img class="img-responsive img-thumbnail-sm65 bra" alt="Propaganda Saigon" src="https://thue.today/media/images/section/brand/thumbnail/_propaganda-saigon.jpg" data-original="https://thue.today/media/images/section/brand/thumbnail/_propaganda-saigon.jpg" style="display: block;">
-                            </a>
-                        </figure>
-                    </div>
-
-                    <div class="media-body">
-                        <a href="https://thue.today/tuyen-dung/nhan-vien-phuc-vu.151" data-job-id="151">
-                            <p itemprop="employmentType" class="nom tc2 ts12 tb short-text lh1-4">
-                                Toàn thời gian                            </p>
-                            <p itemprop="title" class="nom tc1 tb ts18 lh1-4">
-                                Nhân viên phục vụ                            </p>
-                            <p class="nom tc3 tb ts12 short-text lh1-4">
-                                <span>7,000,000</span> - <span>8,000,000</span><span> vnd</span>                            </p>
-
-                            <p itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization" class="nom ts12 short-text lh1-4">
-                                <span class="tc4">Đăng bởi</span>
-                                <span itemprop="name" class="tc2 tb">Propaganda Saigon</span>
-                                <span itemprop="image" class="hidden" src="">https://thue.today/media/images/section/brand/thumbnail/_propaganda-saigon.jpg</span>
-                                <span itemprop="sameAs" class="hidden">https://thue.today/propagandasaigon</span>
-                            </p>
-
-                            <span itemprop="jobLocation" itemscope="" itemtype="http://schema.org/Place">
-                                <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                                    <p itemprop="streetAddress" class="nom ts11 short-text lh1-4">
-                                        21 Han Thuyen. Q1                                    </p>
-
-                                    <p class="nom ts11 short-text lh1-4">
-                                        <span itemprop="addressLocality">Hồ Chí Minh</span>
-                                    </p>
-                                    <span itemprop="addressCountry" class="hidden">VN</span>
-                                </span>
-                            </span>
-                        </a>
-
-                        <span itemprop="datePosted" class="hidden">2018-07-25 21:20:59</span>
-                        <span itemprop="validThrough" class="hidden">2018-08-29</span>
-
-                        <span itemprop="description" class="hidden">
-                             - Nhận order từ khách và chăm sóc khách tốt suốt service
-- Hoàn thành các công việc được giao trong ngày                        </span>
-                    </div>
+<div class="row">
+   <div class="col s12">
+        <!-- category item -->
+        <div class="category-item col s4">
+            <div class="category-icon">
+                <i class="ti-user"></i>
+            </div>
+            <h2 class="category-name">
+                Phục vụ nhà hàng, cafe, trà 
+            </h2>
+        </div>
+         <!-- category item -->
+         <div class="category-item col s4">
+                <div class="category-icon">
+                    <i class="ti-user"></i>
                 </div>
+                <h2 class="category-name">
+                    Phục vụ nhà hàng, cafe, trà 
+                </h2>
             </div>
         </div>
-    </div>
+             <!-- category item -->
+        <div class="category-item col s4">
+                <div class="category-icon">
+                    <i class="ti-user"></i>
+                </div>
+                <h2 class="category-name">
+                    Phục vụ nhà hàng, cafe, trà 
+                </h2>
+            </div>
+   </div>
+</div>
 @include('mobile.layouts.filter-footer')
 @endsection
