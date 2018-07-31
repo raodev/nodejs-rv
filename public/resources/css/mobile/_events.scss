@@ -1,0 +1,32 @@
+.event{
+    &-item{
+        min-height: 80px;
+        width: 100%;
+        float: left;
+        padding: 10px;
+        position: relative;
+        color: $primary_color;
+        .card{
+            padding: 8px 12px;
+            margin: 0px;
+        }
+        &-title{
+            font-size: 14px;
+            line-height: 18px;
+            margin: 0px;
+            padding-bottom: 8px;
+        }
+        &-exceprt{
+            font-size: 14px;
+            text-align: center;
+            margin: 0px;
+            line-height: 19px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            height: 96px;
+            max-width: 100%;
+        }
+    }
+}

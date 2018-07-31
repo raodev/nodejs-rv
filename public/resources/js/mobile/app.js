@@ -191,29 +191,27 @@ function RaoViecAppClass() {
         $('select').formSelect();
         $('.tabs').tabs();
         $('.collapsible').collapsible();
-        // $('.slider').slider({
-        //     height: 250
-        // });
-        // $('.collapsible-hover').hover(function(){
-        //         $(this).addClass('active');
-        //         $(this).find('.collapsible-body').fadeIn();
-        //     },
-        //     function(){
-        //         $(this).removeClass('active');
-        //         $(this).find('.collapsible-body').fadeOut();
-        //     });
     }
     app.$view.init = function () {
-        $.get('/demo', function(res){
-            console.log( res );
+        $('.slider').each(function(){
+            var $slider = $(this);
+            var id = $slider.attr('id');
+            if( id == undefined || id == '' ){
+                id = app.$view.createId();
+                $slider.attr('id', id);
+            }
+            var height = $slider.data('height');
+            if( height == undefined ){
+                height = 120;
+            }
+
+            $slider.addClass('active').slider({
+                height: height
+            });
+            $('#' +id).css({
+                height : height
+            });
         });
-        /*=================== PRELOADER ===================*/
-        $(window).on('load', function () {
-            $(".preloading").fadeOut("slow");
-        });
-        // $('.slider').slider({
-        //     height : 120
-        // });
         /*=================== SIDENAV CATEGORY ===================*/
         $('.button-collapse').each(function () {
             var $btn = $(this);
@@ -240,105 +238,16 @@ function RaoViecAppClass() {
 
 
         /*=================== FOOTER ===================*/
-        $('#page-content').css('min-height', $(document).height() - ($('#header').height() + $('#footer').height()));
-
-        /*=================== CAROUSEL SLIDER  ===================*/
-        $('.carousel.carousel-slider').carousel({fullWidth: true}, setTimeout(autoplay, 4500));
-
-        function autoplay() {
-            $('.carousel').carousel('next');
-            setTimeout(autoplay, 4500);
-        }
-
-        /*=================== QTY INPUT ===================*/
-        $('<div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div>').insertAfter('.quantity input');
-        $('.quantity').each(function () {
-            var spinner = jQuery(this),
-                input = spinner.find('input[type="number"]'),
-                btnUp = spinner.find('.quantity-up'),
-                btnDown = spinner.find('.quantity-down'),
-                min = input.attr('min'),
-                max = input.attr('max');
-
-            btnUp.on("click", function () {
-                var oldValue = parseFloat(input.val());
-                if (oldValue >= max) {
-                    var newVal = oldValue;
-                } else {
-                    var newVal = oldValue + 1;
-                }
-                spinner.find("input").val(newVal);
-                spinner.find("input").trigger("change");
-            });
-
-            btnDown.on("click", function () {
-                var oldValue = parseFloat(input.val());
-                if (oldValue <= min) {
-                    var newVal = oldValue;
-                } else {
-                    var newVal = oldValue - 1;
-                }
-                spinner.find("input").val(newVal);
-                spinner.find("input").trigger("change");
-            });
-
-        });
-
-        /*=================== GALLERY FILTERING FUCTION  ===================*/
-        $(".filter-button").on("click", function () {
-            var value = $(this).attr('data-filter');
-
-            if (value == "gallery-no-filter") {
-                $('.gallery-img-box').removeClass("gallery-hidden");
-            }
-            else {
-                $(".gallery-img-box").not('.' + value).addClass("gallery-hidden");
-                $('.gallery-img-box').filter('.' + value).removeClass("gallery-hidden");
-
-            }
-        });
-
-        $('.filter-gallery .filter-button').on("click", function () {
-            $('.filter-gallery').find('.filter-button.active').removeClass('active');
-            $(this).addClass('active');
-        });
-
-        /*=================== MAGNIFICPOPUP GALLERY  ===================*/
-        $(".gallery-list").magnificPopup({
-            type: "image",
-            removalDelay: 300
-        });
 
 
-        //
-        // /** init tab */
-        // $('.tabs').tabs();
-        // $('.slider').slider({
-        //     height: 250
-        // });
         var $left_side = $('#nav-mobile-category');
         var $page_load_content = $('#page-content-loader');
         var $header = $('#header');
         var window_width = parseFloat($(window).width());
-        var remain = window_width - config.max_width;
-        // if( remain > 0 ){
-        //     $left_side.css({
-        //         left : remain / 2
-        //     });
-        // }
-        if (window_width > 1024) {
-            // $left_side.addClass('open');
-        }
 
-        // $(window).resize(function(){
-        //     var w = parseFloat( $(this).width() );
-        //     if( w > 1024 ){
-        //         $left_side.addClass('open');
-        //     }else{
-        //         $left_side.removeClass('open');
-        //     }
-        // });
-        // $('select').material_select();
+        var remain = window_width - config.max_width;
+
+
         $(".preloading").fadeOut("slow");
         window.addEventListener('popstate', function (event) {
             event.preventDefault();

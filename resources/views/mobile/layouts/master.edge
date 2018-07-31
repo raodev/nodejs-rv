@@ -28,387 +28,395 @@
     {{css('resources/css/mobile/custom.css')}}
 </head>
 <body id="homepage" data-api="" data-max-width=1800>
-<!-- BEGIN PRELOADING -->
-<div class="preloading">
-    <div class="wrap-preload">
-        <div class="cssload-loader"></div>
-    </div>
-</div>
-<!-- END PRELOADING -->
-<!-- HEADER -->
 <div class="row" id="route-app">
     <header id="header">
+        {{--<nav>--}}
+            {{--<div class="nav-wrapper content-wrapper">--}}
+                {{--<div class="row menu-content hide-on-large-only">--}}
+                    {{--<div class="col s12">--}}
+                        {{--<ul class="right ">--}}
+                            {{--<li>--}}
+                                {{--<a href="#" data-activates="nav-mobile-category" class="button-collapse">--}}
+                                    {{--<i class="fas fa-align-right"></i>--}}
+                                {{--</a>--}}
+                            {{--</li>--}}
+                            {{--<li>--}}
+                                {{--<a href="#" data-activates="nav-mobile-account" class="button-collapse"--}}
+                                   {{--data-edge="right"><i class="far fa-user-circle"></i></a>--}}
+                            {{--</li>--}}
+                        {{--</ul>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="row menu-content hide-on-med-and-down">--}}
+                    {{--<div class="left-box ">--}}
+                        {{--<div class="header-logo ">--}}
+                            {{--<a href="" class="nav-logo center-align valign-wrappe">--}}
+                                {{--<i class="fab fa-envira"></i>--}}
+                                {{--<img src="{{assetsUrl('upload/images/logo.png')}}" alt="">--}}
+                            {{--</a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="right-box">--}}
+                        {{--<div class="row">--}}
+                            {{--<div class="col s6">--}}
+                                {{--<div class="search-wrapper ">--}}
+                                    {{--<form>--}}
+                                        {{--<div class="input-field">--}}
+                                            {{--<input id="search" type="search" required>--}}
+                                            {{--<label class="label-icon" for="search">--}}
+                                                {{--<i class="material-icons search-icon">search</i>--}}
+                                            {{--</label>--}}
+                                            {{--<i class="material-icons close-icon">close</i>--}}
+                                        {{--</div>--}}
+                                    {{--</form>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="col s6">--}}
+                                {{--<ul class="right">--}}
+                                    {{--<li>--}}
+                                        {{--<a href="/" @click.stop.prevent="loadView('')">--}}
+                                            {{--Home--}}
+                                        {{--</a>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<a href="login" @click.stop.prevent="loadView('login')">--}}
+                                            {{--Login/Register--}}
+                                        {{--</a>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<a href="network" @click.stop.prevent="loadView('network')">--}}
+                                            {{--Raoviec Network--}}
+                                        {{--</a>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<a href="about-us" @click.stop.prevent="loadView('about-us')">--}}
+                                            {{--About us--}}
+                                        {{--</a>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<a href="/contact" @click.stop.prevent="loadView('contact')">--}}
+                                            {{--Contact--}}
+                                        {{--</a>--}}
+                                    {{--</li>--}}
+                                    {{--<li>--}}
+                                        {{--<a href="#" data-activates="nav-mobile-account" class="button-collapse"--}}
+                                           {{--data-edge="right">--}}
+                                            {{--<i class="far fa-user-circle"></i>--}}
+                                        {{--</a>--}}
+                                    {{--</li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+
+                {{--</div>--}}
+
+            {{--</div>--}}
+        {{--</nav>--}}
         <nav>
-            <div class="nav-wrapper content-wrapper">
-                <div class="row menu-content hide-on-large-only">
-                    <div class="col s12">
-                        <ul class="right ">
-                            <li>
-                                <a href="#" data-activates="nav-mobile-category" class="button-collapse">
-                                    <i class="fas fa-align-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" data-activates="nav-mobile-account" class="button-collapse"
-                                   data-edge="right"><i class="far fa-user-circle"></i></a>
-                            </li>
-                        </ul>
+            <div class="nav-wrapper">
+                <div class="left-menu">
+                    <div class="search">
+                        <input type="text" readonly class="browser-default" placeholder="Tìm việc" >
+                        <div class="icon">
+                            <i class="ti-search"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="row menu-content hide-on-med-and-down">
-                    <div class="left-box ">
-                        <div class="header-logo ">
-                            <a href="" class="nav-logo center-align valign-wrappe">
-                                <i class="fab fa-envira"></i>
-                                <img src="{{css('upload/images/logo.png')}}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="right-box">
-                        <div class="row">
-                            <div class="col s6">
-                                <div class="search-wrapper ">
-                                    <form>
-                                        <div class="input-field">
-                                            <input id="search" type="search" required>
-                                            <label class="label-icon" for="search">
-                                                <i class="material-icons search-icon">search</i>
-                                            </label>
-                                            <i class="material-icons close-icon">close</i>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col s6">
-                                <ul class="right">
-                                    <li>
-                                        <a href="/" @click.stop.prevent="loadView('')">
-                                            Home
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="login" @click.stop.prevent="loadView('login')">
-                                            Login/Register
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="network" @click.stop.prevent="loadView('network')">
-                                            Raoviec Network
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="about-us" @click.stop.prevent="loadView('about-us')">
-                                            About us
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/contact" @click.stop.prevent="loadView('contact')">
-                                            Contact
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" data-activates="nav-mobile-account" class="button-collapse"
-                                           data-edge="right">
-                                            <i class="far fa-user-circle"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="right-menu">
+                    <a href="#" class="brand-logo">
+                        <img src="{{assetsUrl('upload/images/logo.png')}}" alt="">
+                    </a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="ti-menu"></i></a>
                 </div>
 
             </div>
         </nav>
-
     </header>
     <!-- END HEADER -->
     <!-- SIDE NAV-->
-    <nav>
-        <ul id="nav-mobile-category" class="side-nav">
+    <ul id="nav-mobile-category" class="side-nav">
 
-            <li>
-                <a href="/jobs" @click.stop.prevent="loadView('jobs')">
-                    <i class="fas fa-plus"></i>
-                    <span>
+        <li>
+            <a href="/jobs" @click.stop.prevent="loadView('jobs')">
+                <i class="fas fa-plus"></i>
+                <span>
                     Hot jobs
                 </span>
-                </a>
-            </li>
-            <li>
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="fas fa-plus"></i>
-                            <span>
+            </a>
+        </li>
+        <li>
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="fas fa-plus"></i>
+                        <span>
                             Job filter with industry
                         </span>
-                            <span><i class="fas fa-caret-down"></i></span>
-                        </div>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="">
-                                        <i class="fas fa-angle-right"></i>
-                                        <span>IT/ Software</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="">
-                                        <i class="fas fa-angle-right"></i>
-                                        <span>Restaurant/Coffe</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="">
-                                        <i class="fas fa-angle-right"></i>
-                                        <span>Bank</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="">
-                                        <i class="fas fa-angle-right"></i>
-                                        <span>Online/Partner</span>
-                                    </a>
-                                </li>
+                        <span><i class="fas fa-caret-down"></i></span>
+                    </div>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a class="waves-effect waves-blue" href="">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>IT/ Software</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Restaurant/Coffe</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Bank</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Online/Partner</span>
+                                </a>
+                            </li>
 
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="fas fa-plus"></i>
-                            <span>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="fas fa-plus"></i>
+                        <span>
                             Job filter with location
                         </span>
-                            <span><i class="fas fa-caret-down"></i></span>
-                        </div>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="">
-                                        <i class="fas fa-angle-right"></i>
-                                        <span>Ho chi minh</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="">
-                                        <i class="fas fa-angle-right"></i>
-                                        <span>Ha noi</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="">
-                                        <i class="fas fa-angle-right"></i>
-                                        <span>Da Nang</span>
-                                    </a>
-                                </li>
+                        <span><i class="fas fa-caret-down"></i></span>
+                    </div>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a class="waves-effect waves-blue" href="">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Ho chi minh</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Ha noi</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Da Nang</span>
+                                </a>
+                            </li>
 
 
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="">
-                    <i class="fas fa-plus"></i>
-                    <span>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">
+                <i class="fas fa-plus"></i>
+                <span>
                     Companies
                 </span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="fas fa-plus"></i>
-                    <span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="fas fa-plus"></i>
+                <span>
                     Companies Profile
                 </span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="fas fa-plus"></i>
-                    <span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="fas fa-plus"></i>
+                <span>
                     Job seeker profile
                 </span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="fas fa-plus"></i>
-                    <span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="fas fa-plus"></i>
+                <span>
                     Events
                 </span>
-                </a>
-            </li>
-            <li>
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="fas fa-plus"></i>
-                            <span>
+            </a>
+        </li>
+        <li>
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="fas fa-plus"></i>
+                        <span>
                             Raoviec network
                         </span>
-                            <span><i class="fas fa-caret-down"></i></span>
-                        </div>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="">
-                                        <i class="fas fa-angle-right"></i>
-                                        <span>Ho chi minh</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="">
-                                        <i class="fas fa-angle-right"></i>
-                                        <span>Ha noi</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="">
-                                        <i class="fas fa-angle-right"></i>
-                                        <span>Da Nang</span>
-                                    </a>
-                                </li>
+                        <span><i class="fas fa-caret-down"></i></span>
+                    </div>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a class="waves-effect waves-blue" href="">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Ho chi minh</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Ha noi</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Da Nang</span>
+                                </a>
+                            </li>
 
 
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="">
-                    <i class="fas fa-plus"></i>
-                    <span>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">
+                <i class="fas fa-plus"></i>
+                <span>
                     Elearning
                 </span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="fas fa-plus"></i>
-                    <span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="fas fa-plus"></i>
+                <span>
                     Blog
                 </span>
-                </a>
-            </li>
+            </a>
+        </li>
 
-        </ul>
-        <ul id="nav-mobile-account" class="side-nav">
-            <li class="profile">
-                <div class="li-profile-info" v-if="user">
-                    <img src="{{css('resources/img/profile.jpg')}}" alt="profile">
-                    <h2>
-                        @{{ user.full_name }}
-                    </h2>
-                    <div class="emailprofile">
-                        @{{ user.email }}
+    </ul>
+    <ul id="nav-mobile-account" class="side-nav">
+        <li class="profile">
+            <div class="li-profile-info" v-if="user">
+                <img src="{{css('resources/img/profile.jpg')}}" alt="profile">
+                <h2>
+                    @{{ user.full_name }}
+                </h2>
+                <div class="emailprofile">
+                    @{{ user.email }}
+                </div>
+            </div>
+            <div class="bg-profile-li" style="background-image: url(resources/img/bg-profile.jpg);">
+            </div>
+        </li>
+        <li>
+            <a class="waves-effect waves-blue" href="homepage.html"><i class="fas fa-home"></i>Home</a>
+        </li>
+        <li>
+            <a href="/logout"
+               @click.stop.prevent="loadView('post-job')">
+                <i class="fas fa-heart"></i>
+                Post new job
+            </a>
+        </li>
+        <li>
+            <a href="gallery.html"><i class="fas fa-camera-retro"></i>Gallery</a>
+        </li>
+        <li>
+            <a href="setting.html"><i class="fas fa-cog"></i>Setting</a>
+        </li>
+        <li>
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="fas fa-columns"></i>Pages <span><i class="fas fa-caret-down"></i></span>
                     </div>
-                </div>
-                <div class="bg-profile-li" style="background-image: url(resources/img/bg-profile.jpg);">
-                </div>
-            </li>
-            <li>
-                <a class="waves-effect waves-blue" href="homepage.html"><i class="fas fa-home"></i>Home</a>
-            </li>
-            <li>
-                <a href="/logout"
-                   @click.stop.prevent="loadView('post-job')">
-                    <i class="fas fa-heart"></i>
-                    Post new job
-                </a>
-            </li>
-            <li>
-                <a href="gallery.html"><i class="fas fa-camera-retro"></i>Gallery</a>
-            </li>
-            <li>
-                <a href="setting.html"><i class="fas fa-cog"></i>Setting</a>
-            </li>
-            <li>
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="fas fa-columns"></i>Pages <span><i class="fas fa-caret-down"></i></span>
-                        </div>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="homepage.html"><i
-                                                class="fas fa-angle-right"></i>Home</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="setting.html"><i
-                                                class="fas fa-angle-right"></i>Setting</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="404.html"><i
-                                                class="fas fa-angle-right"></i>404</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="login.html"><i
-                                                class="fas fa-angle-right"></i>Sign In</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="signup.html"><i
-                                                class="fas fa-angle-right"></i>Sign Up</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="single-page.html"><i
-                                                class="fas fa-angle-right"></i>Single page</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="gallery.html"><i
-                                                class="fas fa-angle-right"></i>Gallery</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="product-list.html"><i
-                                                class="fas fa-angle-right"></i>Product List</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="wish-list.html"><i
-                                                class="fas fa-angle-right"></i>Wish List</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="product-page.html"><i
-                                                class="fas fa-angle-right"></i>Product Detail</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="shopping-cart.html"><i
-                                                class="fas fa-angle-right"></i>Shopping Cart</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="checkout.html"><i
-                                                class="fas fa-angle-right"></i>Checkout</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-blue" href="contact.html"><i
-                                                class="fas fa-angle-right"></i>Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="contact.html"><i class="fas fa-envelope"></i>Contact Us</a>
-            </li>
-            <li>
-                <a href="login.html"><i class="fas fa-sign-in-alt"></i>Sign in</a>
-            </li>
-            <li>
-                <a href="/logout" @click.stop.prevent="logout">
-                    <i class="fas fa-sign-out-alt"></i>Sign Out</a>
-            </li>
-        </ul>
-    </nav>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a class="waves-effect waves-blue" href="homepage.html"><i
+                                            class="fas fa-angle-right"></i>Home</a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="setting.html"><i
+                                            class="fas fa-angle-right"></i>Setting</a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="404.html"><i
+                                            class="fas fa-angle-right"></i>404</a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="login.html"><i
+                                            class="fas fa-angle-right"></i>Sign In</a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="signup.html"><i
+                                            class="fas fa-angle-right"></i>Sign Up</a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="single-page.html"><i
+                                            class="fas fa-angle-right"></i>Single page</a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="gallery.html"><i
+                                            class="fas fa-angle-right"></i>Gallery</a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="product-list.html"><i
+                                            class="fas fa-angle-right"></i>Product List</a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="wish-list.html"><i
+                                            class="fas fa-angle-right"></i>Wish List</a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="product-page.html"><i
+                                            class="fas fa-angle-right"></i>Product Detail</a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="shopping-cart.html"><i
+                                            class="fas fa-angle-right"></i>Shopping Cart</a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="checkout.html"><i
+                                            class="fas fa-angle-right"></i>Checkout</a>
+                            </li>
+                            <li>
+                                <a class="waves-effect waves-blue" href="contact.html"><i
+                                            class="fas fa-angle-right"></i>Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="contact.html"><i class="fas fa-envelope"></i>Contact Us</a>
+        </li>
+        <li>
+            <a href="login.html"><i class="fas fa-sign-in-alt"></i>Sign in</a>
+        </li>
+        <li>
+            <a href="/logout" @click.stop.prevent="logout">
+                <i class="fas fa-sign-out-alt"></i>Sign Out</a>
+        </li>
+    </ul>
 
 </div>
 
@@ -423,9 +431,10 @@
 </section>
 
 {{ script('resources/js/jquery.min.js') }}
-{{ script('resources/js/materialize.js')}}
 <!-- Owl carousel -->
 {{ script('resources/lib/owlcarousel/owl.carousel.min.js')}}
+{{ script('resources/js/materialize.js')}}
+
 <!-- Magnific Popup core JS file -->
 {{ script('resources/lib/Magnific-Popup-master/dist/jquery.magnific-popup.js')}}
 <!-- Slick JS -->
@@ -435,7 +444,7 @@
 {{ script('resources/lib/vue/vue.js')}}
 {{ script('resources/lib/vue/vue-form.js')}}
 {{ script('resources/lib/ckeditor/ckeditor.js')}}
-{{ script('resources/js/app.js?v=122')}}
+{{ script('resources/js/mobile/app.js?v=122')}}
 @!section('script')
 </body>
 
