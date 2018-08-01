@@ -22,6 +22,16 @@ class HomeController {
         mobile = mobile ? 'mobile' : 'desktop';
         return view.render(  mobile + '/home', data);
     }
+    async jobDetail({view, req}){
+        const md = new MobileDetect(req.headers['user-agent']);
+        var data = {
+            title : 'Danh sách việc làm',
+            is_mobile : md.mobile()
+        }
+        var mobile = md.mobile();
+        mobile = mobile ? 'mobile' : 'desktop';
+        return view.render(  mobile + '/job-detail', data);
+    }
     demo({req}){
         var is_bot = isBot(req.headers['user-agent']);
         return is_bot;

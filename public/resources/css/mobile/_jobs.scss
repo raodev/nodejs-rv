@@ -74,5 +74,58 @@
            }
        }
    }
+   &-detail{
+       padding: 2px auto;
+       color : $primary_color;
+       font-size : 14px;
+       line-height: 24px;
+       font-weight: 400;
+       width: 100%;
+       background: #fff;
+       position: relative;
+       overflow: hidden;
+       &-thumbnail{
+          
+           img{
+            border-radius: 4px;
+            border: 1px solid rgba(0,0,0,0.09);
+           }
+       }
+       &-title{
+           font-size: 14px;
+           line-height: 18px;
+           margin: 4px auto;
+       }
+       &-salary{
+           color : $second_color;
+           font-weight: 600;
+           font-size: 12px;
+           float: right;
+       }
+       &-header{
+           padding-top: 20px;
+        
+       }
+       &-group-heading{
+            font-size: 14px;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(0,0,0,0.09);
+            color : #00ABBE;
+            padding-bottom: 8px;
+       }
+       &-description{
+           padding-left: 15px;
+           padding-right: 15px;
+       }
+       &-company{
+            color : #00ABBE;
+            font-weight: 500;
+            font-size: 14px;
+       }
+       p{
+        line-height: 24px;
+       }
+    
+   }
 
 }

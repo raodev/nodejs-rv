@@ -502,6 +502,63 @@
   color: #00ABBE;
 }
 
+.job-detail {
+  padding: 2px auto;
+  color: #1e3368;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  width: 100%;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.job-detail-thumbnail img {
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.job-detail-title {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 4px auto;
+}
+
+.job-detail-salary {
+  color: #ee1d24;
+  font-weight: 600;
+  font-size: 12px;
+  float: right;
+}
+
+.job-detail-header {
+  padding-top: 20px;
+}
+
+.job-detail-group-heading {
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  color: #00ABBE;
+  padding-bottom: 8px;
+}
+
+.job-detail-description {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.job-detail-company {
+  color: #00ABBE;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.job-detail p {
+  line-height: 24px;
+}
+
 .event-item {
   min-height: 80px;
   width: 100%;
